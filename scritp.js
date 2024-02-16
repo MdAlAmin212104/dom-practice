@@ -48,12 +48,24 @@ btn.addEventListener('click', function(){
       console.log(coupon);
       if(totalPrice >=200){
             if(coupon == 'SELL200'){
+                  const discountElement = document.getElementById('discount');
+                  const discountAmount = totalPrice * 0.2;
+                  discountElement.innerText = discountAmount.toFixed(2);
+
+                  //set total price with discountElement sub
+
+                  const restTotal = document.getElementById('rest-total');
+                  restTotal.innerText = totalPrice - discountAmount.toFixed(2);
+
+                  document.getElementById('input-field').value = ' ';
 
             }else{
                   alert('Invalid coupon');
+                  document.getElementById('input-field').value = ' ';
             }
 
       }else{
             alert('buy more products');
+            document.getElementById('input-field').value = ' ';
       }
 })
