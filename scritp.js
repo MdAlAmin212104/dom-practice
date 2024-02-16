@@ -40,3 +40,20 @@ for( const cards of card){
 
       })
 }
+const btn = document.getElementById('btn');
+btn.addEventListener('click', function(){
+
+      const couponElement = document.getElementById('input-field').value;
+      const coupon = couponElement.split(' ').join('').toUpperCase();
+      console.log(coupon);
+      if(totalPrice >=200){
+            if(coupon == 'SELL200'){
+
+            }else{
+                  alert('Invalid coupon');
+            }
+
+      }else{
+            alert('buy more products');
+      }
+})
